@@ -3,7 +3,7 @@ session_start();
 error_reporting(1);
 include('../connection.php');
 if ($_SESSION['admin_logged_in'] == "") {
-    header("location: ../index.html");
+    header("location: ../index.php");
 }
 extract($_REQUEST);
 if (isset($add)) {
