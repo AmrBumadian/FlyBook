@@ -2,6 +2,9 @@
 session_start();
 error_reporting(1);
 include('../connection.php');
+if ($_SESSION['admin_logged_in'] == "") {
+    header("location: ../index.html");
+}
 extract($_REQUEST);
 
 $aircrafts = mysqli_query($con, "SELECT * FROM aircrafts");
@@ -15,7 +18,7 @@ if (isset($update)) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php include('../head.php') ?>
+<?php include('head.php') ?>
 
 <body>
     <?php include('navbar.php') ?>

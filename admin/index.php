@@ -2,17 +2,20 @@
 session_start();
 error_reporting(1);
 include('../connection.php');
+if ($_SESSION['admin_logged_in'] == "") {
+    header("location: ../index.html");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include('../head.php'); ?>
+<?php include('head.php'); ?>
 
-<body>
+<body class="home">
     <?php include('navbar.php') ?>
-    <main>
-        <h2>Welcome to the Admin panel</h2>
-    </main>
+    <section>
+        <h2>Welcome to the admin panel</h2>
+    </section>
     <?php include('../footer.php') ?>
 </body>
 

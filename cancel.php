@@ -2,6 +2,9 @@
 session_start();
 error_reporting(1);
 include('connection.php');
+if ($_SESSION['account_logged_in'] == "") {
+    header("location: index.php");
+}
 $flightID = $_SESSION['flightIDCancel'];
 extract($_REQUEST);
 

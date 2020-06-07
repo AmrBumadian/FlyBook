@@ -2,10 +2,11 @@
 session_start();
 error_reporting(1);
 ?>
-<nav>
+<nav class="navigation" id="navBar">
     <ul>
         <?php
         if ($_SESSION['admin_logged_in'] != "") {
+            echo "<script> document.getElementById('navBar').classList.add('small'); </script>";
         ?>
             <li><a href="index.php">Home</a></li>
             <li><a href="addAircraft.php">Add an aircraft</a></li>

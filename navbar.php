@@ -25,7 +25,7 @@ error_reporting(1);
         <?php } else {
         ?>
             <li><a href="login.php">Login</a></li>
-            <li><a href="admin/login.php">Login as admin</a></li>
+            <li><a href="adminLogin.php">Login as admin</a></li>
         <?php } ?>
     </ul>
 </nav>
