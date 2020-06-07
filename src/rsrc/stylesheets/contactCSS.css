@@ -1,0 +1,76 @@
+.contactUs {
+    background-color: rgb(225, 243, 252) ;
+}
+.white {
+    background-color: white !important;
+}
+.checkbtn {
+    font-size: 1.5rem;
+    color: white;
+    float: right;
+    line-height: 4rem;
+    margin-right: 2rem;
+    cursor: pointer;
+    display: none;
+}
+#check {
+    display: none;
+}
+#main {
+    height:100vh;
+    margin-left: 2%;
+}
+#main h1{
+    font-family: 'montserrat', sans-serif;
+    font-size: 2rem;
+    padding-top: 2%;
+    padding-left: 2%;
+}
+#main h3 {
+    font-family: 'muli', sans-serif;
+    font-size: 1rem;
+    padding-top: 1%;
+    padding-left: 2.5%;
+}
+.formBox {
+    background-color: rgba(54,54,54,0.4);
+    display: block;
+    width: 50%;
+    height: 75%;
+    border-radius: 5px;
+}
+.formBox label {
+    padding: 3%;
+    display: block;
+    margin-top: 1%;
+    
+}
+.formBox label input {
+
+  width: 100%;
+  padding: 12px;
+  margin: 1% 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.formBox input[type="submit"] {
+    color: white;
+    margin-left: 40%;
+    padding: 3% 5%;
+    background-color: #0082e6;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+.formBox input[type="submit"]:hover {
+    color: #0082e6;
+    background-color: white;
+    border: 2px solid #0082e6;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+.formBox label textarea {
+    display: block;
+    margin-top: 1%;
+}

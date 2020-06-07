@@ -8,17 +8,12 @@ include('connection.php');
 
 <?php include('head.php'); ?>
 
-<body>
+<body class="home">
     <?php include('navbar.php') ?>
-    <main>
-        <h2>Book your flight with us</h2>
-        <p>Booking you flight from and to anywhere in the world has become much easier</p>
-        <div id="album">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-        </div>
-    </main>
+    <section>
+        <h2>Book your flight with FlyBook</h2>
+        <p>Booking your flight from and to anywhere in the world has become much easier</p>
+    </section>
     <?php include('footer.php') ?>
 </body>
 

@@ -1,8 +1,5 @@
 <footer id="about">
-    <nav>
-        <ul>
-            <li><a href="https://www.github.com">Flight Booking GitHub</a></li>
-        </ul>
-    </nav>
-    <h3>&copy;Copyright Flight Booking 2020</h3>
+    <i>&#xf09b;</i>
+    <a href="https://www.github.com">FlyBook's GitHub</a>
+    <h3>&copy;Copyright FlyBook 2020</h3>
 </footer>

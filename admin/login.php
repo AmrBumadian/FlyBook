@@ -37,6 +37,9 @@ if (isset($login)) {
     </form>
 
     <?php include('../footer.php'); ?>
+    <script>
+        document.getElementById('navBar').classList.add('navigation');
+    </script>
 </body>
 
 </html>

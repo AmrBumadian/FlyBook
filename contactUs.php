@@ -13,17 +13,19 @@ if (isset($send)) {
 <html lang="en">
 <?php include('head.php') ?>
 
-<body>
+<body class="contactUs">
 
     <?php include('navbar.php') ?>
-    <h1>Contact US</h1>
-
     <div id="main">
+        <h1 class="contactH">Contact US</h1>
         <h3>We are glad to listen from you</h3>
-        <form method="POST" id="customerForm">
-            <input type="text" id="name" placeholder="Full Name" name="name" required>
-            <input type="text" id="email" placeholder="Email" name="email" required>
-            <textarea id="message" name="message" rows="10" cols="50" maxlength="512" placeholder="Enter you message here" required></textarea>
+        <form class="formBox" method="POST" id="customerForm">
+            <label>Full Name: <input type="text" id="name" placeholder="Full Name" name="name" required> </label>
+            <label>Email:  <input type="text" id="email" placeholder="Email" name="email" required> </label>
+            <label>Message: 
+                <textarea id="message" name="message" rows="10" cols="50" maxlength="512" placeholder="Enter you message here" required>
+                </textarea>
+            </label>
             <input type="submit" id="send" value="Send" name="send">
         </form>
     </div>
@@ -31,6 +33,9 @@ if (isset($send)) {
     <?= $msg ?>
 
     <?php include('footer.php') ?>
+    <script>
+        document.getElementById("navBar").classList.add("white");
+    </script>
 </body>
 
 </html>

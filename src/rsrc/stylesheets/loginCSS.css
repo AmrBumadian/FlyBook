@@ -1,0 +1,58 @@
+.login {
+   background-color: rgb(225, 243, 252) ;
+}
+.sign {
+    width: 50%;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
+    justify-content: w;
+}
+.sign h2 {
+    text-align: center;
+    margin-bottom: 2%;
+}
+.info {
+    display: block;
+    margin-top: 10%;
+    border-radius: 25px;
+    border: 20px solid white;
+}
+.info input{
+    
+    border: 0px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.sign input[type="submit"] {
+    display: block;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0,0,0,0.3);
+    border: 0px;
+    border-radius: 5px;
+    padding:  12px 50px;
+    color: white;
+}
+.sign input[type="submit"]:hover {
+    background-color: white;
+    color: #1b9bff;
+    transform: 1s;
+}
+.sign form a {
+    display: block;
+    color: black;
+    margin-top: 5%;
+    text-align: center;
+}
+.sign form a:hover {
+    color: #1b9bff;
+    background-color: rgb(225, 243, 252); 
+    transition: 0.5s;
+}
+.small {
+    font-size: 0.5rem;
+}
