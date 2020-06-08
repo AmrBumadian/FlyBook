@@ -2,7 +2,7 @@
 session_start();
 error_reporting(1);
 ?>
-<nav class="navigation" id="navBar">
+<nav class="navigation" id="navBarAdmin">
     <label class="checkbtn">
         <input type="checkbox" id="check">
         <i class="fas fa-bars"></i>
@@ -11,7 +11,7 @@ error_reporting(1);
     <ul>
         <?php
         if ($_SESSION['admin_logged_in'] != "") {
-            echo "<script> document.getElementById('navBar').classList.add('small'); </script>";
+            echo "<script> document.getElementById('navBarAdmin').classList.add('small'); </script>";
         ?>
             <li id="homeNav"><a href="index.php">Home</a></li>
             <li id="addAircraftNav"><a href="addAircraft.php">Add an aircraft</a></li>

@@ -59,7 +59,7 @@ if (isset($update)) {
 
     <?php include('../footer.php') ?>
     <script>
-        document.getElementById("navBar").classList.add("white");
+        document.getElementById("navBarAdmin").classList.add("white");
         document.getElementById('flightsNav').firstChild.classList.add('active');
     </script>
 

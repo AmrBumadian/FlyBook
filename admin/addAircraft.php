@@ -26,20 +26,22 @@ if (isset($add)) {
 
 <body>
     <?php include('navbar.php') ?>
-    <div class="sign">
-        <h2><?= $msg ?></h2>
-        <h2>Add a new Aircraft</h2>
-        <form method="POST">
-            <div class="info">
-                <input type="text" name="name" placeholder="Aircraft Name" required>
-                <input type="text" name="company" placeholder="Aircraft Company" required>
-            </div>
-            <input class="card-button" type="submit" name="add" value="Add Aircraft" required>
-        </form>
-    </div>
+    <main>
+        <div class="sign">
+            <h2><?= $msg ?></h2>
+            <h2>Add a new Aircraft</h2>
+            <form method="POST">
+                <div class="info">
+                    <input type="text" name="name" placeholder="Aircraft Name" required>
+                    <input type="text" name="company" placeholder="Aircraft Company" required>
+                </div>
+                <input class="card-button" type="submit" name="add" value="Add Aircraft" required>
+            </form>
+        </div>
+    </main>
     <?php include('../footer.php') ?>
     <script>
-        document.getElementById("navBar").classList.add("white");
+        document.getElementById("navBarAdmin").classList.add("white");
         document.getElementById('addAircraftNav').firstChild.classList.add('active');
     </script>
 

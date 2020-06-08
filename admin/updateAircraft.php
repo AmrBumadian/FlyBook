@@ -45,7 +45,7 @@ if (isset($update)) {
     </div>
     <?php include('../footer.php') ?>
     <script>
-        document.getElementById("navBar").classList.add("white");
+        document.getElementById("navBarAdmin").classList.add("white");
     </script>
 </body>
 

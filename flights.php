@@ -38,7 +38,7 @@ if (isset($book)) {
                 <h4 class="card-item">From: <span class="card-item-val"><?= $flight['src'] ?></span></h4>
                 <h4 class="card-item">To: <span class="card-item-val"><?= $flight['dest'] ?></span></h4>
                 <h4 class="card-item">Date: <span class="card-item-val"><?= $flight['flightDate'] ?></span></h4>
-                <h4 class="card-item">Time: <span class="card-item-val" <?= $flight['flightTime'] ?>></span></h4>
+                <h4 class="card-item">Time: <span class="card-item-val"><?= $flight['flightTime'] ?></span></h4>
                 <h4 class="card-item">Number of tickets available: <span class="card-item-val"><?= $flight['num'] ?></span></h4>
                 <form method="POST">
                     <input type="number" value="<?= $flight['id'] ?>" name="flightID" hidden>

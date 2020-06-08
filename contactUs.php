@@ -24,8 +24,7 @@ if (isset($send)) {
             <label>Full Name: <input type="text" id="name" placeholder="Full Name" name="name" required> </label>
             <label>Email: <input type="text" id="email" placeholder="Email" name="email" required> </label>
             <label>Message:
-                <textarea id="msg" name="message" rows="5" cols="50" maxlength="512" placeholder="Enter you message here" required>
-                </textarea>
+                <textarea id="msg" name="message" rows="5" cols="50" maxlength="512" placeholder="Enter you message here" required></textarea>
             </label>
             <input type="submit" id="send" value="Send" name="send">
         </form>
@@ -35,6 +34,7 @@ if (isset($send)) {
     <script>
         document.getElementById("navBar").classList.add("white");
         document.getElementById('contactUsNav').firstChild.classList.add('active');
+        document.getElementById('msg').value = "";
     </script>
 
 </body>

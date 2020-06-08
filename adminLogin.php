@@ -39,6 +39,7 @@ if (isset($login)) {
 
     <?php include('footer.php'); ?>
     <script>
+    document.getElementById("navBar").classList.add("white");
         document.getElementById("navBar").classList.add("small");
         document.getElementById('adminLoginNav').firstChild.classList.add('active');
     </script>
