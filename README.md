@@ -1,6 +1,6 @@
 # Web-Technology-Project
 # Domestic Flight Reservation
-This is a domestic flight reservation website build in PHP and MySQL.
+This is a domestic flight reservation website built in PHP and MySQL.
 
 The website consists of two main types of users:
 ## 1- Customer:
