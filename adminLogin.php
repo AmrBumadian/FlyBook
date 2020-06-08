@@ -39,10 +39,10 @@ if (isset($login)) {
 
     <?php include('footer.php'); ?>
     <script>
-        document.getElementById('navBar').classList.add('navigation');
+        document.getElementById("navBar").classList.add("small");
         document.getElementById('adminLoginNav').firstChild.classList.add('active');
     </script>
 
 </body>
 
-</html>
+</html> 
