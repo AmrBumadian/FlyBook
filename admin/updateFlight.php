@@ -18,11 +18,12 @@ if (isset($update)) {
         flightTime = '$time'
         WHERE id = $flightID";
     if (mysqli_query($con, $query)) {
-        $msg = "<h3>Flight details updated successfully</h3>";
+        $msg = "Flight details updated successfully";
     } else {
-        $msg = "<h3>Couldn't update flight </h3>";
+        $msg = "Couldn't update flight";
     }
-    mysqli_query($con, "SELECT * FROM aircrafts WHERE name = '$name'");
+    $sql = mysqli_query($con, "SELECT * FROM flights WHERE id = '$flightID'");
+    $flight = mysqli_fetch_assoc($sql);
 }
 ?>
 
@@ -33,21 +34,27 @@ if (isset($update)) {
 <body>
     <?php include('navbar.php') ?>
 
-    <form method="POST">
-        <label for="src">Flight Source: </label>
-        <input type="text" name="src" value="<?= $flight['src'] ?>">
-        <label for="dest">Flight Destination: </label>
-        <input type="text" name="dest" value="<?= $flight['dest'] ?>">
-        <label for="date">Flight Date: </label>
-        <input type="date" name="date" value="<?= $flight['date'] ?>">
-        <label for="time">Flight Time: </label>
-        <input type="time" name="time" value="<?= $flight['time'] ?>">
-        <input type="submit" value="Update Flight" name="update">
-    </form>
-
-    <?php echo $msg ?>
+    <div class="sign">
+        <h2 class="success"><?= $msg ?></h2>
+        <form method="POST">
+            <div class="info">
+                <label for="src">Flight Source: </label>
+                <input type="text" name="src" value="<?= $flight['src'] ?>">
+                <label for="dest">Flight Destination: </label>
+                <input type="text" name="dest" value="<?= $flight['dest'] ?>">
+                <label for="date">Flight Date: </label>
+                <input type="date" name="date" value="<?= $flight['flightDate'] ?>">
+                <label for="time">Flight Time: </label>
+                <input type="time" name="time" value="<?= $flight['flightTime'] ?>">
+            </div>
+            <input class="card-button" type="submit" value="Update Flight" name="update">
+        </form>
+    </div>
 
     <?php include('../footer.php') ?>
+    <script>
+        document.getElementById("navBar").classList.add("white");
+    </script>
 </body>
 
 </html>

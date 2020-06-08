@@ -10,22 +10,22 @@ error_reporting(1);
     </label>
     <label class="logo">FlyBook</label>
     <ul>
-        <li><a class="active" href="index.php">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="contactUs.php">Contact us</a></li>
+        <li id="homeNav"><a href="index.php">Home</a></li>
+        <li id="aboutNav"><a href="#about">About</a></li>
+        <li id="contactUsNav"><a href="contactUs.php">Contact us</a></li>
         <?php
         if ($_SESSION['account_logged_in'] != "") {
             echo "<script> document.getElementById('navBar').classList.add('small'); </script>";
         ?>
-            <li><a href="profile.php">My Profile</a></li>
-            <li><a href="myFlights.php">My flights</a></li>
-            <li><a href="flights.php">Available flights</a></li>
-            <li><a href="logout.php">Logout</a></li>
+            <li id="profileNav"><a href="profile.php">My Profile</a></li>
+            <li id="myFlightsNav"><a href="myFlights.php">My flights</a></li>
+            <li id="flightsNav"><a href="flights.php">Available flights</a></li>
+            <li id=""><a href="logout.php">Logout</a></li>
             
         <?php } else {
         ?>
-            <li><a href="login.php">Login</a></li>
-            <li><a href="adminLogin.php">Login as admin</a></li>
+            <li id="loginNav"><a href="login.php">Login</a></li>
+            <li id="adminLoginNav"><a href="adminLogin.php">Login as admin</a></li>
         <?php } ?>
     </ul>
 </nav>

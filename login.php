@@ -12,7 +12,7 @@ if (isset($login)) {
         $_SESSION['account_logged_in'] = $emailID;
         header("location: index.php");
     } else {
-        $error = "<h4 class='error'> Invalid email or password!</h4>";
+        $msg = "Invalid email or password";
     }
 }
 ?>
@@ -26,21 +26,23 @@ if (isset($login)) {
     <?php include('navbar.php') ?>
 
     <div class="sign">
+        <h2 class="success"><?= $msg ?></h2>
         <h2>Login to your account</h2>
-        <?php echo $error ?>
         <form method="POST">
             <div class="info">
                 <input type="email" placeholder="Email" name="emailID" required>
                 <input type="password" name="pass" placeholder="Password" required>
             </div>
-            <input type="submit" name="login" value="Login" required>
+            <input class="card-button" type="submit" name="login" value="Login" required>
             <a href="signup.php">Register a new Account</a>
         </form>
     </div>
     <?php include('footer.php'); ?>
     <script>
         document.getElementById('navBar').classList.add('white');
+        document.getElementById('loginNav').firstChild.classList.add('active');
     </script>
+
 </body>
 </body>
 

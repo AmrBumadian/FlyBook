@@ -15,8 +15,10 @@ if (isset($update)) {
     company = '$company'
     WHERE name = '$aircraftName'";
     mysqli_query($con, $query);
-    $msg = "<h3>Aircraft details updated successfully</h3>";
-    $sql = mysqli_query($con, "SELECT * FROM aircrafts WHERE name = '$name'");
+    $msg = "Aircraft details updated successfully";
+    $aircraftName = $name;
+    $_SESSION['aircraftName'] = $name;
+    $sql = mysqli_query($con, "SELECT * FROM aircrafts WHERE name = '$aircraftName'");
 }
 ?>
 
@@ -29,17 +31,22 @@ if (isset($update)) {
 
     <?php $aircraft = mysqli_fetch_assoc($sql); ?>
 
-    <form method="POST">
-        <label for="name">Aircraft Name: </label>
-        <input type="text" name="name" value="<?= $aircraft['name'] ?>">
-        <label for="company">Aircraft Company: </label>
-        <input type="text" name="company" value="<?= $aircraft['company'] ?>">
-        <input type="submit" value="Update Aircraft" name="update">
-    </form>
-
-    <?php echo $msg ?>
-
+    <div class="sign">
+        <h2 class="success"><?= $msg ?></h2>
+        <form method="POST">
+            <div class="info">
+                <label for="name">Aircraft Name: </label>
+                <input type="text" name="name" value="<?= $aircraft['name'] ?>">
+                <label for="company">Aircraft Company: </label>
+                <input type="text" name="company" value="<?= $aircraft['company'] ?>">
+            </div>
+            <input class="card-button" type="submit" value="Update Aircraft" name="update">
+        </form>
+    </div>
     <?php include('../footer.php') ?>
+    <script>
+        document.getElementById("navBar").classList.add("white");
+    </script>
 </body>
 
 </html>

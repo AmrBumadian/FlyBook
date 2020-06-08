@@ -26,15 +26,20 @@ if (isset($conCode)) {
 <body>
     <?php include('navbar.php') ?>
 
-    <h2>Please enter the booking confirmation code sent to your Email: </h2>
-    <form method="POST">
-        <input type="text" name="confirmationCode" placeholder="Confirmation Code" required>
-        <input type="submit" value="Submit" name="conCode">
-    </form>
-
-    <?= $msg ?>
+    <div class="sure">
+        <h2>Please enter the booking confirmation code sent to your Email: </h2>
+        <form method="POST">
+            <input type="text" name="confirmationCode" placeholder="Confirmation Code" required>
+            <input class="card-button" type="submit" value="Submit" name="conCode">
+        </form>
+        <h2><?= $msg ?></h2>   
+    </div>
+    
 
     <?php include('footer.php') ?>
+    <script>
+        document.getElementById("navBar").classList.add("white");
+    </script>
 </body>
 
 </html>

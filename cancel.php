@@ -22,18 +22,23 @@ if (isset($submit)) {
 
 <body>
     <?php include('navbar.php'); ?>
-    
-    <h2>Are you sure you want to cancel flight <?= $flightID ?></h2>
-    <form method="POST">
-        <label for="cancel">Yes</label>
-        <input type="checkbox" value="yes" name="cancel">
-        <label for="cancel">No</label>
-        <input type="checkbox" value="no" name="cancel">
-        <input type="submit" value="Submit" name="submit">
-    </form>
+
+    <div class="sure">
+        <h2>Are you sure you want to cancel flight <?= $flightID ?> with ticket ID <?= $_SESSION['ticketID'] ?> ?</h2>
+        <form method="POST">
+            <label for="cancel">Yes</label>
+            <input type="radio" value="yes" name="cancel">
+            <label for="cancel">No</label>
+            <input type="radio" value="no" name="cancel">
+            <input class="card-button" type="submit" value="Submit" name="submit">
+        </form>
+    </div>
+
 
     <?php include('footer.php'); ?>
-
+    <script>
+        document.getElementById("navBar").classList.add("white");
+    </script>
 </body>
 
 </html>

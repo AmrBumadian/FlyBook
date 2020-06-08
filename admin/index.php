@@ -17,6 +17,8 @@ if ($_SESSION['admin_logged_in'] == "") {
         <h2>Welcome to the admin panel</h2>
     </section>
     <?php include('../footer.php') ?>
+    <script>document.getElementById('homeNav').firstChild.classList.add('active');</script>
+
 </body>
 
 </html>

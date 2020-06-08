@@ -31,18 +31,18 @@ if (isset($book)) {
             $aircraft = mysqli_fetch_assoc($query);
         ?>
 
-            <div>
-                <h4>Flight ID: <?= $flight['id'] ?></h4>
-                <h4>Aircraft: <?= $flight['aircraft'] ?></h4>
-                <h4>Company: <?= $aircraft['company'] ?></h4>
-                <h4>From: <?= $flight['src'] ?></h4>
-                <h4>To: <?= $flight['dest'] ?></h4>
-                <h4>Date: <?= $flight['flightDate'] ?></h4>
-                <h4>Time: <?= $flight['flightTime'] ?></h4>
-                <h4>Number of tickets available: <?= $flight['num'] ?></h4>
+            <div class="card">
+                <h4 class="card-item">Flight ID: <span class="card-item-val"><?= $flight['id'] ?></span></h4>
+                <h4 class="card-item">Aircraft: <span class="card-item-val"><?= $flight['aircraft'] ?></span></h4>
+                <h4 class="card-item">Company: <span class="card-item-val"><?= $aircraft['company'] ?></span></h4>
+                <h4 class="card-item">From: <span class="card-item-val"><?= $flight['src'] ?></span></h4>
+                <h4 class="card-item">To: <span class="card-item-val"><?= $flight['dest'] ?></span></h4>
+                <h4 class="card-item">Date: <span class="card-item-val"><?= $flight['flightDate'] ?></span></h4>
+                <h4 class="card-item">Time: <span class="card-item-val" <?= $flight['flightTime'] ?>></span></h4>
+                <h4 class="card-item">Number of tickets available: <span class="card-item-val"><?= $flight['num'] ?></span></h4>
                 <form method="POST">
-                    <input type="number" value="<?=$flight['id']?>" name="flightID" hidden>
-                    <input type="submit" value="Book Flight" name="book">
+                    <input type="number" value="<?= $flight['id'] ?>" name="flightID" hidden>
+                    <input class="card-button" type="submit" value="Book Flight" name="book">
                 </form>
             </div>
         <?php
@@ -51,6 +51,11 @@ if (isset($book)) {
     </div>
 
     <?php include('footer.php') ?>
+    <script>
+        document.getElementById("navBar").classList.add("white");
+        document.getElementById('flightsNav').firstChild.classList.add('active');
+    </script>
+
 
 </body>
 

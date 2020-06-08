@@ -9,13 +9,13 @@ extract($_REQUEST);
 if (isset($add)) {
     $sql = mysqli_query($con, "SELECT * FROM aircrafts WHERE name = '$name' AND company = '$company'");
     if (mysqli_num_rows($sql)) {
-        $msg = "<h1> There's already an aircraft with these details </h1>";
+        $msg = "There's already an aircraft with these details";
     } else {
         $query = "INSERT INTO aircrafts (name, company) VALUES ('$name', '$company')";
         if (mysqli_query($con, $query)) {
-            $msg = "<h1> Aircraft is Added Successfully! </h1>";
+            $msg = "Aircraft is Added Successfully!";
         } else {
-            $msg = "<h1> Couldn't Add Aircraft</h1>";
+            $msg = "Couldn't Add Aircraft";
         }
     }
 }
@@ -26,14 +26,23 @@ if (isset($add)) {
 
 <body>
     <?php include('navbar.php') ?>
-    <?php echo $msg ?>
-    <form method="POST">
-        <input type="text" name="name" placeholder="Aircraft Name" required>
-        <input type="text" name="company" placeholder="Aircraft Company" required>
-        <input type="submit" name="add" value="Add Aircraft" required>
-    </form>
-
+    <div class="sign">
+        <h2><?= $msg ?></h2>
+        <h2>Add a new Aircraft</h2>
+        <form method="POST">
+            <div class="info">
+                <input type="text" name="name" placeholder="Aircraft Name" required>
+                <input type="text" name="company" placeholder="Aircraft Company" required>
+            </div>
+            <input class="card-button" type="submit" name="add" value="Add Aircraft" required>
+        </form>
+    </div>
     <?php include('../footer.php') ?>
+    <script>
+        document.getElementById("navBar").classList.add("white");
+        document.getElementById('addAircraftNav').firstChild.classList.add('active');
+    </script>
+
 </body>
 
 </html>

@@ -22,17 +22,22 @@ if (isset($submit)) {
 
 <body>
     <?php include('navbar.php'); ?>
-    
-    <h2>Are you sure you want to book flight <?= $flightID ?></h2>
-    <form method="POST">
-        <label for="book">Yes</label>
-        <input type="checkbox" value="yes" name="book">
-        <label for="book">No</label>
-        <input type="checkbox" value="no" name="book">
-        <input type="submit" value="Submit" name="submit">
-    </form>
+
+    <div class="sure">
+        <h2>Are you sure you want to book flight <?= $flightID ?></h2>
+        <form method="POST">
+            <label for="book">Yes</label>
+            <input type="radio" value="yes" name="book">
+            <label for="book">No</label>
+            <input type="radio" value="no" name="book">
+            <input class="card-button" type="submit" value="Submit" name="submit">
+        </form>
+    </div>
 
     <?php include('footer.php'); ?>
+    <script>
+        document.getElementById("navBar").classList.add("white");
+    </script>
 
 </body>
 

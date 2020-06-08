@@ -16,7 +16,7 @@ if (isset($update)) {
         $_SESSION['flightID'] = $flightID;
         header('location: updateFlight.php');
     } else {
-        $msg = "<h2>You can't update a flight that is already booked by users</h2>";
+        $msg = "You can't update a flight that is already booked by users";
     }
 }
 
@@ -28,7 +28,7 @@ if (isset($update)) {
 <body>
     <?php include('navbar.php') ?>
 
-    <?= $msg ?>
+    <h2 class="success"><?= $msg ?></h2>
 
     <div class="flights">
         <?php
@@ -38,18 +38,18 @@ if (isset($update)) {
             $bookedQuery = mysqli_query($con, "SELECT * FROM tickets WHERE flightID = '$flightID'");
             $bookedCount = (int) mysqli_num_rows($bookedQuery);
         ?>
-            <div>
-                <h4>Flight ID: <?= $flight['id'] ?></h4>
-                <h4>Aircraft: <?= $flight['aircraft'] ?></h4>
-                <h4>From: <?= $flight['src'] ?></h4>
-                <h4>To: <?= $flight['dest'] ?></h4>
-                <h4>Date: <?= $flight['flightDate'] ?></h4>
-                <h4>Time: <?= $flight['flightTime'] ?></h4>
-                <h4>Number of booked tickets: <?= $bookedCount ?></h4>
-                <h4>Number of available tickets: <?= $flight['num'] ?></h4>
+            <div class="card">
+                <h4 class="card-item">Flight ID: <span class="card-item-val"><?= $flight['id'] ?></span></h4>
+                <h4 class="card-item">Aircraft: <span class="card-item-val"><?= $flight['aircraft'] ?></span></h4>
+                <h4 class="card-item">From: <span class="card-item-val"><?= $flight['src'] ?></span></h4>
+                <h4 class="card-item">To: <span class="card-item-val"><?= $flight['dest'] ?></span></h4>
+                <h4 class="card-item">Date: <span class="card-item-val"><?= $flight['flightDate'] ?></span></h4>
+                <h4 class="card-item">Time: <span class="card-item-val"><?= $flight['flightTime'] ?></span></h4>
+                <h4 class="card-item">Number of booked tickets: <span class="card-item-val"><?= $bookedCount ?></span></h4>
+                <h4 class="card-item">Number of available tickets: <span class="card-item-val"><?= $flight['num'] ?></span></h4>
                 <form method="POST">
                     <input type="number" value="<?= $flight['id'] ?>" name="flightID" hidden>
-                    <input type="submit" value="Update Flight" name="update">
+                    <input class="card-button" type="submit" value="Update Flight" name="update">
                 </form>
             </div>
         <?php
@@ -58,6 +58,11 @@ if (isset($update)) {
     </div>
 
     <?php include('../footer.php') ?>
+    <script>
+        document.getElementById("navBar").classList.add("white");
+        document.getElementById('flightsNav').firstChild.classList.add('active');
+    </script>
+
 
 </body>
 

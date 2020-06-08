@@ -12,8 +12,7 @@ if (isset($login)) {
         $_SESSION['admin_logged_in'] = $username;
         header("location: admin/index.php");
     } else {
-        $error = "<h4 class='error'> Invalid admin username or password "
-        . $username . " " . $pass . "</h4>";
+        $msg = "Invalid admin username or password";
     }
 }
 ?>
@@ -26,20 +25,24 @@ if (isset($login)) {
 
     <?php include('navbar.php') ?>
 
-    <h1>Login as an admin</h1>
-    <?php echo $error ?>
-
-    <form method="POST">
-        <input type="text" placeholder="Admin username" name="username" required>
-        <input type="password" name="pass" placeholder="Admin password" required>
-        <input type="submit" name="login" value="Login" required>
-
-    </form>
+    <div class="sign">
+        <h2 class="success"><?= $msg ?></h2>
+        <h2>Login as an admin</h2>
+        <form method="POST">
+            <div class="info">
+                <input type="text" placeholder="Admin username" name="username" required>
+                <input type="password" name="pass" placeholder="Admin password" required>
+            </div>
+            <input class="card-button" type="submit" name="login" value="Login" required>
+        </form>
+    </div>
 
     <?php include('footer.php'); ?>
     <script>
         document.getElementById('navBar').classList.add('navigation');
+        document.getElementById('adminLoginNav').firstChild.classList.add('active');
     </script>
+
 </body>
 
 </html>

@@ -10,6 +10,15 @@ html {
 }
 body {
     font-family: 'montserrat', sans-serif;
+    background-color: rgb(225, 243, 252);
+}
+input {
+    transition: 0.3s;
+    outline: none;
+}
+input:focus {
+    outline: none;
+    border-bottom: 1px solid rgb(0, 94, 201);
 }
 
 .navigation {
@@ -18,9 +27,8 @@ body {
 }
 label.logo {
     display: inline-block;
-
     font-family: 'montserrat', sans-serif;
-    color: black;  
+    color: #0d7fd6;  
     font-size: 2rem;
     line-height: 4rem;
     padding: 0 3rem;
@@ -66,7 +74,6 @@ label.logo {
     background-size: cover;
 }
 section {
-   
     height: 100vh;
     text-align: center;
 }
@@ -97,14 +104,29 @@ footer i {
 footer a {
     font-family: 'open sans', sans-serif;
     color: black;
+    transition: 0.3s;
 }
 footer a:hover {
     background-color: rgba(0,0,0,0);
-    color: white
+    color: white;
 }
 footer h3 {
    font-family: 'open sans', sans-serif;
    font-size: 1rem;
+}
+.success {
+    width: fit-content;
+    margin: auto;
+    margin-top: 2%;
+}
+.flights {
+    width: 100%;
+    min-height: 100vh;
+    padding: 2%;
+}
+.hello {
+    padding-top: 7%;
+    margin-bottom: -10%;
 }
 @media (max-width : 983px){
     label.logo {

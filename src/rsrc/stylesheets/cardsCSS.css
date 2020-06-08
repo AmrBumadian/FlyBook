@@ -1,0 +1,71 @@
+.card {
+    width: 27%;
+    margin: 3%;
+    float: left;
+    padding: 2%;
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    box-shadow: 3px 3px rgb(219, 219, 219);
+}
+
+.card:last-of-type {
+    float: none;
+}
+
+.card-item {
+    margin-bottom: 12px;
+    border-bottom: 1px solid rgb(201, 201, 201);
+    padding-bottom: 12px;
+    color: #0c5b97;
+}
+
+.card-item-val {
+    color: rgb(31, 31, 31);
+    font-weight: lighter;
+}
+
+.card-button {
+    font-size: large;
+    display: block;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0,0,0,0.3);
+    border: 0px;
+    border-radius: 5px;
+    padding:  12px 50px;
+    color: white;
+    transition: 0.3s;
+}
+.card-button:hover {
+    background-color: #1b9bff;
+    color: white;
+    transform: 1s;
+}
+
+.sure {
+    text-align: center;
+    min-height: 100vh;
+    padding-top: 10%;
+}
+
+.sure h2 {
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.sure form label{
+    font-size: 1.2rem;
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.sure form input[type="text"] {
+    width: 20%;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 100%;
+    border: 1px solid rgb(218, 218, 218);
+}

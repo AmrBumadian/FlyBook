@@ -30,15 +30,15 @@ if (isset($update)) {
         while ($aircraft = mysqli_fetch_assoc($aircrafts)) {
             $aircraftName = $aircraft['name'];
             $countQuery = mysqli_query($con, "SELECT * FROM flights WHERE aircraft = '$aircraftName'");
-            $count = (int)mysqli_num_rows($countQuery);
+            $count = (int) mysqli_num_rows($countQuery);
         ?>
-            <div>
-                <h4>aircraft Name: <?= $aircraft['name'] ?></h4>
-                <h4>Aircraft Company: <?= $aircraft['company'] ?></h4>
-                <h4>Number of currently registered flights: <?= $count ?></h4>
+            <div class="card">
+                <h4 class="card-item">aircraft Name: <span class="card-item-val"><?= $aircraft['name'] ?></span></h4>
+                <h4 class="card-item">Aircraft Company: <span class="card-item-val"><?= $aircraft['company'] ?></span></h4>
+                <h4 class="card-item">Number of currently registered flights: <span class="card-item-val"><?= $count ?></span></h4>
                 <form method="POST">
                     <input type="text" name="aircraftName" value="<?= $aircraft['name'] ?>" hidden>
-                    <input type="submit" value="Update Aircraft" name="update">
+                    <input class="card-button" type="submit" value="Update Aircraft" name="update">
                 </form>
             </div>
         <?php
@@ -47,6 +47,11 @@ if (isset($update)) {
     </div>
 
     <?php include('../footer.php') ?>
+    <script>
+        document.getElementById("navBar").classList.add("white");
+        document.getElementById('aircraftsNav').firstChild.classList.add('active');
+    </script>
+
 
 </body>
 
