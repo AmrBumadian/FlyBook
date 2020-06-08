@@ -1,6 +1,9 @@
 .login {
    background-color: rgb(225, 243, 252) ;
 }
+.small {
+    font-size: 0.5rem !important;
+}
 .sign {
     width: 50%;
     margin-top: 5%;
@@ -50,9 +53,6 @@
 .sign form a:hover {
     color: #1b9bff;
     background-color: rgb(225, 243, 252);  
-}
-.small {
-    font-size: 0.5rem !important;
 }
 #message {
     display: none;
