@@ -1,6 +1,6 @@
-# Web-Technology-Project
+# FlyBook
 # Domestic Flight Reservation
-This is a domestic flight reservation website built in PHP and MySQL.
+This is a domestic flight reservation website built in PHP and MySQL as a final project for the Web Technology course in college.
 
 The website consists of two main types of users:
 ## 1- Customer:
